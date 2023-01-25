@@ -21,7 +21,8 @@ const controller = {
     let idProduct = parseInt(req.params.id);
     let productDetail = products.find(product => product.id === idProduct)
     let imagesSlider = productDetail.sliderImage.split(",")
-
+    console.log(imagesSlider);
+    
     res.render("productDetails", { productDetail, imagesSlider })
   }, //done
 
